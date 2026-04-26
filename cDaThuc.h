@@ -1,17 +1,24 @@
 #ifndef CDATHUC_H
 #define CDATHUC_H
-class cDaThuc{
- private:
-     int bac;
-    float a[MAX];
 
- public:
-    void Nhap();
-    void Xuat();
-    float TinhGiaTri(float x);
-   cDaThuc Cong(const cDaThuc& dt);
-    cDaThuc Tru(const cDaThuc& dt);
+#include <vector>
 
+class cDaThuc {
+private:
+    int bac;
+    vector<float> a;
 
+public:
+    cDaThuc();
+    cDaThuc(int n);
+
+    void nhap();
+    void xuat();
+
+    float tinhGiaTri(float x);
+
+    cDaThuc cong(const cDaThuc& dt);
+    cDaThuc tru(const cDaThuc& dt);
 };
-#endif // CDATHUC_H
+
+#endif
